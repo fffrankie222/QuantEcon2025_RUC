@@ -1,3 +1,28 @@
+# Ignore common data files
+*.csv
+*.xlsx
+*.xls
+*.tsv
+*.json
+*.xml
+*.yaml
+*.yml
+*.txt
+*.dat
+*.bin
+*.h5
+*.hdf5
+*.mat
+*.pickle
+*.pkl
+*.gz
+*.zip
+*.rar
+*.tar
+*.tar.gz
+*.tgz
+*.7z
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
