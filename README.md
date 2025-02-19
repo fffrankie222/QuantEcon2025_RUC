@@ -1,5 +1,5 @@
 # Artifical Intelligence & Python Programming (FinTech)
-- `Lei Ge` Asst. Professor in Quant Economics
+- `Lei Ge:` Asst. Professor in Quant Economics
 - `Email:` gelei at ruc.edu.cn`
 
 ## Course Description
