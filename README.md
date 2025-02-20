@@ -9,5 +9,5 @@ This course is designed to introduce students to the fundamentals of artificial 
 - `Lei Ge (葛雷)` Asst. Professor in Quant Economics, Renmin University of China
 - `Xiangyuan Mo （莫湘源）`  Teaching Assistant, Renmin University of China
 - `Chenxi Wang （王晨曦）` Teaching Assistant, Renmin University of China
-- `Tianyou Cui （崔天保）` Teaching Assistant, Renmin University of China
+- `Tianyou Cui （崔天佑）` Teaching Assistant, Renmin University of China
 - `Yichen Xu （徐一宸）` Teaching Assistant, Renmin University of China
