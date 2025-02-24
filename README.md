@@ -1,7 +1,7 @@
 # Artifical Intelligence & Python Programming (FinTech)
 - `Lei Ge:` Asst. Professor in Quant Economics
 -  PhD Georgetown University; Former Quant Researcher in Fannie Mae
-- `Email:` gelei at ruc.edu.cn`
+- `Email:` gelei at ruc.edu.cn
 
 ## Course Description
 This course is designed to introduce students to the fundamentals of artificial intelligence and Python programming for the financial predictions. The course will cover the knowledge of machine learning, deep learning, and natural language processing. Students will learn how to use Python to write code and how to use Python libraries to build machine learning models.
