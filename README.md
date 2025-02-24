@@ -1,6 +1,6 @@
 # Artifical Intelligence & Python Programming (FinTech)
 - `Lei Ge:` Asst. Professor in Quant Economics
--  PhD Georgetown University; Previous Quant Researcher in Fannie Mae
+-  PhD Georgetown University; Former Quant Researcher in Fannie Mae
 - `Email:` gelei at ruc.edu.cn`
 
 ## Course Description
