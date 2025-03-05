@@ -5,6 +5,13 @@
 
 ## Course Description
 This course is designed to introduce students to the fundamentals of artificial intelligence and Python programming for the financial predictions. The course will cover the knowledge of machine learning, deep learning, and natural language processing. Students will learn how to use Python to write code and how to use Python libraries to build machine learning models.
+Contents:
+1. Python Basics 
+2. Financial Big data (Kaggle,HuggingFace, WRDS, CSMAR)
+3. Machine Learning Fundamentals (Optimization, Lasso, Emsembled Methods, Modeling Emsembling)
+4. Deep Learning Fundamentals (ANN, CNN)
+5. Natural Language Processing Fundamentals (Transformers)
+
 
 ## Teaching Team 
 - `Lei Ge (葛雷)` Asst. Professor in Quant Economics, Renmin University of China
