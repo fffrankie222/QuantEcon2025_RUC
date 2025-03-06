@@ -14,8 +14,12 @@ We will meet at every `Thurday at 6:00pm @ Minde Business School Room 205`. Plea
 3. Machine Learning Fundamentals (Optimization, Lasso, Emsembled Methods, Modeling Emsembling)
 4. Deep Learning Fundamentals (ANN, CNN)
 5. Natural Language Processing Fundamentals (Transformers)
-6. Papers Reading (XGBOOST paper, Transformer paper, Two top finance papers using ML)
-
+6. Papers Reading (XGBOOST Chen paper, Transformer Vaswai paper, Two top finance papers using ML)
+7. Textbook:
+   - https://quantecon.org/lectures/
+   - https://www.deeplearningbook.org/
+   - https://github.com/ageron/handson-ml3
+   - https://github.com/HandsOnLLM/Hands-On-Large-Language-Models
 
 ## Teaching Team 
 - `Lei Ge (葛雷)` Asst. Professor in Quant Economics, Renmin University of China
