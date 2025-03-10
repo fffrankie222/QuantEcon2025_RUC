@@ -1,0 +1,38 @@
+#pip install docxtpl
+#pip install docx2pdf
+#install doxtpl and docx2pdf if not installed before
+import pandas as pd
+from docxtpl import DocxTemplate
+from docx2pdf import convert
+
+
+# Step1: Read the information 
+schoolinformation=pd.read_excel('D:\\workspace_for_programs\\PYTHONworkspace\\school information.xls',header=None)
+#check whether the data is read properly
+#print(schoolinformation)
+schoolname=schoolinformation.iloc[:,0]
+total_num=len(schoolname)
+
+
+# Step2: Read the template
+template=DocxTemplate('D:\\workspace_for_programs\\PYTHONworkspace\\ApplicationTemplate.docx')
+
+
+# Step3: Loop to substitute the content & Save as docx 
+for i in range(total_num):
+    for t in range(3):
+        schoolname=schoolinformation.iloc[i,0]
+        program=schoolinformation.iloc[i,t+1]
+
+        context={
+        'School_Name':schoolname,
+        'Program_Name':program
+        }
+        template.render(context)
+        file_name=f"D:\\Python_Output\\Application\\{schoolname}_{program}.docx"
+        template.save(file_name)
+
+
+# Step4: Convert all the docx into Pdf and save in another folder.
+convert("D:\\Python_Output\\Application\\","D:\\Python_Output\\ApplicationPdf\\")
+
