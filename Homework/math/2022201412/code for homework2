@@ -1,0 +1,37 @@
+import pandas as pd
+from docxtpl import DocxTemplate
+import os
+
+# MAC无法生成PDF，请老师见谅
+# Step 1: 定义文件路径
+EXCEL_PATH = "universities.xlsx"
+TEMPLATE_PATH = "application_template.docx"
+OUTPUT_FILES = "output_files"
+
+# Step 2: 确保输出目录存在
+def ensure_directory(path):
+    os.makedirs(path, exist_ok=True)
+
+# Step 3: 读取 Excel 文件
+def read_excel(file_path):
+    return pd.read_excel(file_path)
+
+# Step 4: 生成申请信
+def generate_letters(df, template_path, output_files):
+    ensure_directory(output_files)
+    template = DocxTemplate(template_path)
+
+    for _, row in df.iterrows():
+        for major in [row["Major1"], row["Major2"], row["Major3"]]:
+            template.render({"university_name": row["University Names"], "program_name": major})
+            template.save(os.path.join(output_files, f"{row['University Names']}_{major}.docx"))
+
+# Step 5: 执行整个 Workflow
+def main():
+    df = read_excel(EXCEL_PATH)
+    generate_letters(df, TEMPLATE_PATH, OUTPUT_FILES)
+    print("申请信生成完成！")
+
+
+if __name__ == "__main__":
+    main()
