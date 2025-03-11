@@ -1,1 +1,53 @@
 pip install pandas docxtpl docx2pdf
+
+#设置路径
+import pandas as pd
+from docxtpl import DocxTemplate
+import os
+from docx2pdf import convert
+
+def generate_sop(excel_file, template_file, output_folder):
+    # 读取 Excel 文件中的大学和项目数据
+    df = pd.read_excel(excel_file)
+
+    # 创建输出文件夹
+    if not os.path.exists(output_folder):
+        os.makedirs(output_folder)
+
+    # 遍历每个大学及其项目
+    for idx, row in df.iterrows():
+        university_name = row['University Names']
+        programs = [row['Major1'], row['Major2'], row['Major3']]
+
+        for program in programs:
+            # 加载模板
+            doc = DocxTemplate(template_file)
+
+            # 创建一个字典，替换模板中的占位符
+            context = {
+                'university_name': university_name,
+                'program_name': program
+            }
+
+            # 渲染模板并填充数据
+            doc.render(context)
+
+            # 将生成的文档保存到输出文件夹
+            output_filename = f"{university_name}_{program}.docx"
+            output_path = os.path.join(output_folder, output_filename)
+            doc.save(output_path)
+
+            # 将 DOCX 转换为 PDF
+            try:
+                convert(output_path, output_path.replace('.docx', '.pdf'))
+            except Exception as e:
+                print(f"将 {output_filename} 转换为 PDF 时出错: {e}")
+
+            print(f"生成 {university_name} - {program} 的 SOP")
+
+
+excel_file = r'C:\Python_Math\QuantEcon2025_RUC-main\QuantEcon2025_RUC-main\Homework\data\university_list.xlsx'  # Excel 文件路径
+template_file = r'C:\Python_Math\QuantEcon2025_RUC-main\QuantEcon2025_RUC-main\Homework\data\sop_template.docx'  # SOP 模板文件路径
+output_folder = r'C:\Python_Math\QuantEcon2025_RUC-main\QuantEcon2025_RUC-main\Homework\data\output_sops'  # 输出文件夹，用于保存生成的 SOP
+
+generate_sop(excel_file, template_file, output_folder)
